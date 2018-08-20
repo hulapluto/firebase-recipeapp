@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recipe Lister</title>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe List App</h1>
+    </header>
+    
+    <main>
+        <form id="add-recipe-form"></form>
+        <ul id="recipe-list">
+            <!-- <li>test</li>
+            <li>asdf</li>
+            <li>dfdfd</li> -->
+        </ul>
+    </main>
+
+    <footer class="footer">
+        <p>Hullo, world</p>
+        <p>&copy; Mookathustra Industries</p>
+    </footer>
+
+    
+    
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC4-K1iJTVK4g7Z0GljL9ZQZU63YCaTUXY",
+            authDomain: "ukura-931c0.firebaseapp.com",
+            databaseURL: "https://ukura-931c0.firebaseio.com",
+            projectId: "ukura-931c0",
+            storageBucket: "ukura-931c0.appspot.com",
+            messagingSenderId: "537390702440"
+        };
+        firebase.initializeApp(config);
+        //creating constant for linking to db
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>
